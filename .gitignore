@@ -1,7 +1,7 @@
 .pb-env
 **/data/
 .aoc.session.cookie
-.ebc.session.cookie
+.ecd.session.cookie
 *.class
 **/__pycache__/
 **/bin/
