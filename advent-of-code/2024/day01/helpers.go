@@ -14,12 +14,11 @@ func stringToInt(str string) int {
 	return i
 }
 
-func parseInput(puzzleInput string) ([]int, []int) {
+func parseInput(puzzleInput []string) ([]int, []int) {
 	var left, right []int
-	lines := strings.Split(strings.TrimSpace(puzzleInput), "\n")
 
-	for _, line := range lines {
-		parts := strings.Fields(line) // Split by any whitespace
+	for _, line := range puzzleInput {
+		parts := strings.Fields(line)
 		left = append(left, stringToInt(parts[0]))
 		right = append(right, stringToInt(parts[1]))
 	}

@@ -1,6 +1,6 @@
 package main
 
-func part2(puzzleInput string) int {
+func part2(puzzleInput []string) int {
 	left, right := parseInput(puzzleInput)
 
 	count := make(map[int]int)

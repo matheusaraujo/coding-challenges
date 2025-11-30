@@ -1,8 +1,8 @@
 package main
 
-func part2(puzzleInput string) int {
+func part2(puzzleInput []string) int {
 	floor := 0
-	for i, c := range puzzleInput {
+	for i, c := range puzzleInput[0] {
 		if c == '(' {
 			floor++
 		}

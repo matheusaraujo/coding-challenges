@@ -4,7 +4,7 @@ import (
 	"math"
 )
 
-func part1(puzzleInput string) int {
+func part1(puzzleInput []string) int {
 	left, right := parseInput(puzzleInput)
 	sum := 0
 	for i := range left {

@@ -4,9 +4,9 @@ import (
 	"strings"
 )
 
-func part1(puzzleInput string) interface{} {
-	openParentheses := strings.Count(puzzleInput, "(")
-	closeParentheses := strings.Count(puzzleInput, ")")
+func part1(puzzleInput []string) interface{} {
+	openParentheses := strings.Count(puzzleInput[0], "(")
+	closeParentheses := strings.Count(puzzleInput[0], ")")
 
 	return openParentheses - closeParentheses
 }
