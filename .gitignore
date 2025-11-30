@@ -1,0 +1,12 @@
+.pb-env
+**/data/
+.aoc.session.cookie
+.ebc.session.cookie
+*.class
+**/__pycache__/
+**/bin/
+**/obj/
+check.csproj
+Program.cs
+*.plist
+*.pl.bak
