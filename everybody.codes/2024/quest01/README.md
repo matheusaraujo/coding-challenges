@@ -1,5 +1,5 @@
 # Everybody Codes - 2024 Quest 01
 
+The Battle for the Farmlands
 
-
-https://adventofcode.com/2024/day/1
+https://everybody.codes/event/2024/quests/1

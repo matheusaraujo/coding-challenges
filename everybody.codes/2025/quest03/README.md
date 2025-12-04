@@ -1,5 +1,5 @@
 # Everybody Codes - 2025 Quest 03
 
+The Deepest Fit
 
-
-https://adventofcode.com/2025/day/3
+https://everybody.codes/events/2025/quests/3

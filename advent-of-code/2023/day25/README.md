@@ -1,5 +1,5 @@
 # Advent of Code - 2023 Day 25
 
---- Day 25: Snowverload ---
+Snowverload
 
 https://adventofcode.com/2023/day/25

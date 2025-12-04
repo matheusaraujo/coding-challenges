@@ -1,5 +1,5 @@
 # Everybody Codes - 2025 Quest 06
 
+Mentorship Matrix
 
-
-https://adventofcode.com/2025/day/6
+https://everybody.codes/events/2025/quests/6

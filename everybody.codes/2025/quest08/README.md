@@ -1,5 +1,5 @@
 # Everybody Codes - 2025 Quest 08
 
+The Art of Connection
 
-
-https://adventofcode.com/2025/day/8
+https://everybody.codes/events/2025/quests/8
