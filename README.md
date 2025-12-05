@@ -34,6 +34,7 @@
 | `perl` | 28 |
 | `go` | 28 |
 | `javascript` | 18 |
+| `rust` | 2 |
 | `java` | 2 |
 | `csharp` | 2 |
 | `c` | 2 |
