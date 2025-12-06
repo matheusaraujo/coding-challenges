@@ -35,6 +35,7 @@
 | `perl` | 28 |
 | `javascript` | 19 |
 | `rust` | 2 |
+| `lisp` | 2 |
 | `java` | 2 |
 | `csharp` | 2 |
 | `c` | 2 |
