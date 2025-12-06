@@ -1,6 +1,6 @@
 {
   "name": "Coding Challenges",
-  "image": "puzzle-box:latest",
+  "image": "puzzle-box:local",
   "mounts": [
     "source=/Users/matheus/github/matheusaraujo/puzzle-box,target=/usr/local/puzzle-box,type=bind"
   ]

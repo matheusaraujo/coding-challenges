@@ -38,4 +38,5 @@
 | `java` | 2 |
 | `csharp` | 2 |
 | `c` | 2 |
+| `assembly` | 1 |
 <!-- langs-stats-end -->
