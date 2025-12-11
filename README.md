@@ -34,6 +34,8 @@
 | `go` | 33 |
 | `perl` | 28 |
 | `javascript` | 23 |
+| `typescript` | 2 |
+| `ts` | 2 |
 | `rust` | 2 |
 | `lisp` | 2 |
 | `java` | 2 |
