@@ -1,4 +1,4 @@
-function parseInstructions(instructions) {
+export function parseInstructions(instructions) {
   const botChips = new Map();
   const botRules = new Map();
 
@@ -20,7 +20,7 @@ function parseInstructions(instructions) {
   return { botChips, botRules };
 }
 
-function processBots(botChips, botRules, targetPair) {
+export function processBots(botChips, botRules, targetPair) {
   const queue = [...botChips.keys()].filter(
     (bot) => botChips.get(bot).length === 2,
   );
@@ -57,5 +57,3 @@ function processBots(botChips, botRules, targetPair) {
 
   return { targetBot, outputs };
 }
-
-module.exports = { parseInstructions, processBots };

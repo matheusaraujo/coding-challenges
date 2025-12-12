@@ -1,7 +1,7 @@
-class Computer {
+export class Computer {
   constructor(instructions, initialState = {}) {
     this.instructions = instructions.map((instruction) =>
-      instruction.split(" "),
+      instruction.split(" ")
     );
     this.registers = { a: 0, b: 0, c: 0, d: 0, ...initialState };
     this.operations = {
@@ -35,5 +35,3 @@ class Computer {
     return this.registers.a;
   }
 }
-
-module.exports = Computer;

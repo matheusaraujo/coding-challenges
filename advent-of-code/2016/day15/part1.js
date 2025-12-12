@@ -1,7 +1,5 @@
-const { parseInput, findFirstValidTime } = require("./helpers.js");
+import { findFirstValidTime, parseInput } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return findFirstValidTime(parseInput(puzzleInput));
 }
-
-module.exports = part1;

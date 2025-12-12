@@ -1,4 +1,4 @@
-function solve(grid, dirs) {
+export function solve(grid, dirs) {
   grid = border(grid);
   const h = grid.length;
   const w = grid[0].length;
@@ -51,5 +51,3 @@ function border(inputGrid) {
 
   return grid;
 }
-
-module.exports = solve;

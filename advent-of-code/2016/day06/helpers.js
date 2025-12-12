@@ -1,4 +1,4 @@
-function solve(puzzleInput, mostCommon) {
+export function solve(puzzleInput, mostCommon) {
   const length = puzzleInput[0].length;
   const frequency = Array.from({ length }, () => {});
 
@@ -20,5 +20,3 @@ function solve(puzzleInput, mostCommon) {
 
   return result;
 }
-
-module.exports = solve;

@@ -1,6 +1,6 @@
-const { parseInput } = require("./helpers");
+import { parseInput } from "./helpers.js";
 
-const part2 = (puzzleInput) => {
+export function part2(puzzleInput) {
   const { left, right } = parseInput(puzzleInput);
 
   const count = left.reduce((acc, value) => {
@@ -14,6 +14,4 @@ const part2 = (puzzleInput) => {
     }
     return sum;
   }, 0);
-};
-
-module.exports = part2;
+}

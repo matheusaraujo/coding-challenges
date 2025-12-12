@@ -1,6 +1,6 @@
-const { swapCard } = require("./helpers");
+import { swapCard } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   const screen = swapCard(puzzleInput);
   let totalPixels = 0;
 
@@ -10,5 +10,3 @@ function part1(puzzleInput) {
 
   return totalPixels;
 }
-
-module.exports = part1;

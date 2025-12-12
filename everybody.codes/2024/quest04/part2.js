@@ -1,7 +1,5 @@
-const solve = require("./helpers");
+import { solve } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   return solve(puzzleInput, () => 0);
 }
-
-module.exports = part2;

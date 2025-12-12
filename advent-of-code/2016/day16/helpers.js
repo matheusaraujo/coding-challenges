@@ -1,4 +1,4 @@
-function fillDisk(a, size) {
+export function fillDisk(a, size) {
   while (a.length < size) {
     const b = a
       .split("")
@@ -10,7 +10,7 @@ function fillDisk(a, size) {
   return a.substring(0, size);
 }
 
-function checksum(disk) {
+export function checksum(disk) {
   while (disk.length % 2 === 0) {
     let c = "";
     for (let i = 0; i < disk.length; i += 2) {
@@ -21,5 +21,3 @@ function checksum(disk) {
 
   return disk;
 }
-
-module.exports = { fillDisk, checksum };

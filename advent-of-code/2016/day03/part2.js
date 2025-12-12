@@ -1,6 +1,6 @@
-const { parseLine, isTriangle } = require("./helpers.js");
+import { isTriangle, parseLine } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   let validTriangles = 0;
   for (let i = 2; i < puzzleInput.length; i += 3) {
     const [t1, t2, t3] = [
@@ -17,5 +17,3 @@ function part2(puzzleInput) {
   }
   return validTriangles;
 }
-
-module.exports = part2;

@@ -1,11 +1,11 @@
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   return puzzleInput.filter(supportsSsl).length;
 }
 
 function supportsSsl(ip) {
   const parts = ip.split(/\[|\]/);
-  let abas = [];
-  let babs = [];
+  const abas = [];
+  const babs = [];
 
   parts.forEach((part, index) => {
     for (let j = 0; j < part.length - 2; j++) {
@@ -18,5 +18,3 @@ function supportsSsl(ip) {
 
   return abas.some((aba) => babs.includes(`${aba[1]}${aba[0]}${aba[1]}`));
 }
-
-module.exports = part2;

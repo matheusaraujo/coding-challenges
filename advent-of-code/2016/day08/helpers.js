@@ -1,4 +1,4 @@
-function swapCard(operations) {
+export function swapCard(operations) {
   const WIDTH = 50,
     HEIGHT = 6;
   const screen = Array.from({ length: HEIGHT }, () => Array(WIDTH).fill("."));
@@ -47,15 +47,13 @@ const LETTERS = {
   "..##....#....#....#.#..#..##..": "J",
 };
 
-function decodeScreen(screen) {
+export function decodeScreen(screen) {
   let result = "";
   for (let col = 0; col < screen[0].length; col += 5) {
-    let pattern = screen
+    const pattern = screen
       .map((row) => row.slice(col, col + 5).join(""))
       .join("");
     result += LETTERS[pattern] || "?";
   }
   return result;
 }
-
-module.exports = { swapCard, decodeScreen };

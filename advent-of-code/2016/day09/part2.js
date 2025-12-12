@@ -1,6 +1,6 @@
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   let count = 0;
-  for (let line of puzzleInput) {
+  for (const line of puzzleInput) {
     count += countCharsRecursive(line);
   }
   return count;
@@ -15,7 +15,7 @@ function countCharsRecursive(subs) {
       count += 1;
       i += 1;
     } else {
-      let match = subs.slice(i).match(/^\((\d+)x(\d+)\)/);
+      const match = subs.slice(i).match(/^\((\d+)x(\d+)\)/);
       if (!match) {
         count += 1;
         i += 1;
@@ -23,8 +23,8 @@ function countCharsRecursive(subs) {
         let [fullMatch, chars, repeat] = match;
         chars = parseInt(chars, 10);
         repeat = parseInt(repeat, 10);
-        let markerLength = fullMatch.length;
-        let segment = subs.slice(i + markerLength, i + markerLength + chars);
+        const markerLength = fullMatch.length;
+        const segment = subs.slice(i + markerLength, i + markerLength + chars);
         count += countCharsRecursive(segment) * repeat;
         i += markerLength + chars;
       }
@@ -32,5 +32,3 @@ function countCharsRecursive(subs) {
   }
   return count;
 }
-
-module.exports = part2;

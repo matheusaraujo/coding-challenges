@@ -1,4 +1,4 @@
-function Room(line) {
+export function Room(line) {
   this.line = line;
 
   const parts = line.split("-");
@@ -39,5 +39,3 @@ Room.prototype.decrypt = function () {
   });
   return decrypted.join("");
 };
-
-module.exports = Room;

@@ -1,7 +1,5 @@
-const { swapCard, decodeScreen } = require("./helpers");
+import { decodeScreen, swapCard } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   return decodeScreen(swapCard(puzzleInput));
 }
-
-module.exports = part2;

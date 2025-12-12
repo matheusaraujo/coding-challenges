@@ -1,4 +1,4 @@
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return puzzleInput.map(countChars).reduce((a, b) => a + b, 0);
 }
 
@@ -19,5 +19,3 @@ function countChars(str) {
   }
   return count;
 }
-
-module.exports = part1;

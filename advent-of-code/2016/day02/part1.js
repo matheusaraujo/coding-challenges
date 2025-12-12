@@ -1,5 +1,5 @@
 function solve(position, moves) {
-  for (let move of moves) {
+  for (const move of moves) {
     if (move === "U" && position > 3) position -= 3;
     else if (move === "D" && position < 7) position += 3;
     else if (move === "L" && ![1, 4, 7].includes(position)) position -= 1;
@@ -8,16 +8,14 @@ function solve(position, moves) {
   return position;
 }
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   let position = 5;
   let result = "";
 
-  for (let line of puzzleInput) {
+  for (const line of puzzleInput) {
     position = solve(position, line);
     result += position.toString();
   }
 
   return result;
 }
-
-module.exports = part1;

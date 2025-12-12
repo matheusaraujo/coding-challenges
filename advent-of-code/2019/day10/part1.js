@@ -1,7 +1,5 @@
-const { bestAsteroid } = require("./helpers");
+import { bestAsteroid } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return bestAsteroid(puzzleInput).maxVisible;
 }
-
-module.exports = part1;

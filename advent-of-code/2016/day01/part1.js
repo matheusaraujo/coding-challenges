@@ -1,4 +1,4 @@
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   const sequence = puzzleInput[0].split(", ");
   const position = [0, 0];
   const directions = ["N", "E", "S", "W"];
@@ -19,5 +19,3 @@ function part1(puzzleInput) {
 
   return Math.abs(position[0]) + Math.abs(position[1]);
 }
-
-module.exports = part1;

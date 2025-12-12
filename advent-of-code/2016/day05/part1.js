@@ -1,6 +1,6 @@
-const crypto = require("crypto");
+import crypto from "node:crypto";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   const doorId = puzzleInput[0];
   let password = "",
     index = 0;
@@ -15,5 +15,3 @@ function part1(puzzleInput) {
 
   return password;
 }
-
-module.exports = part1;

@@ -1,6 +1,6 @@
-const { directions, isOpenSpace } = require("./helpers");
+import { directions, isOpenSpace } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   return countReachableLocations(parseInt(puzzleInput[0]), 50);
 }
 
@@ -32,5 +32,3 @@ function countReachableLocations(favoriteNumber, maxSteps) {
 
   return visited.size;
 }
-
-module.exports = part2;

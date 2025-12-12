@@ -1,6 +1,6 @@
-const { directions, isOpenSpace } = require("./helpers");
+import { directions, isOpenSpace } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return shortestPath(parseInt(puzzleInput[0]), 31, 39);
 }
 
@@ -32,5 +32,3 @@ function shortestPath(favoriteNumber, targetX, targetY) {
 
   return -1;
 }
-
-module.exports = part1;

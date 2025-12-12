@@ -1,7 +1,5 @@
-const Computer = require("./helpers");
+import { Computer } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return new Computer(puzzleInput).execute();
 }
-
-module.exports = part1;

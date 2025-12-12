@@ -1,7 +1,7 @@
-function parseInput(puzzleInput) {
-  let columns = [];
+export function parseInput(puzzleInput) {
+  const columns = [];
   for (const line of puzzleInput) {
-    let values = line.split(" ");
+    const values = line.split(" ");
     for (let i = 0; i < values.length; i++) {
       columns[i] = columns[i] || [];
       columns[i].push(parseInt(values[i]));
@@ -9,5 +9,3 @@ function parseInput(puzzleInput) {
   }
   return columns;
 }
-
-module.exports = { parseInput };

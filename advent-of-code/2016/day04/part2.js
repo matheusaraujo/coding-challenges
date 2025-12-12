@@ -1,6 +1,6 @@
-const Room = require("./helpers.js");
+import { Room } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   for (let i = 0; i < puzzleInput.length; i++) {
     const room = new Room(puzzleInput[i]);
     if (room.decrypt() === "northpole object storage") {
@@ -8,5 +8,3 @@ function part2(puzzleInput) {
     }
   }
 }
-
-module.exports = part2;

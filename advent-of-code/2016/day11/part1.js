@@ -1,9 +1,7 @@
-const { parseInput, solve } = require("./helpers");
+import { parseInput, solve } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   const { floors } = parseInput(puzzleInput);
   const state = [0, floors];
   return solve(state);
 }
-
-module.exports = part1;

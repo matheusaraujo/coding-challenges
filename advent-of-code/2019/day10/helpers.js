@@ -1,4 +1,4 @@
-function parseAsteroids(puzzleInput) {
+export function parseAsteroids(puzzleInput) {
   const a = {};
   for (let y = 0; y < puzzleInput.length; y++) {
     for (let x = 0; x < puzzleInput[y].length; x++) {
@@ -15,7 +15,7 @@ function gcd(a, b) {
   return a;
 }
 
-function bestAsteroid(puzzleInput) {
+export function bestAsteroid(puzzleInput) {
   const asteroids = parseAsteroids(puzzleInput);
   const coords = Object.keys(asteroids).map((k) => k.split(",").map(Number));
 
@@ -48,5 +48,3 @@ function bestAsteroid(puzzleInput) {
 
   return { bestAsteroid: best, maxVisible };
 }
-
-module.exports = { parseAsteroids, gcd, bestAsteroid };

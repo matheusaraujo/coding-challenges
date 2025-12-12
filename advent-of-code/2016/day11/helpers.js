@@ -1,4 +1,4 @@
-function parseInput(puzzleInput) {
+export function parseInput(puzzleInput) {
   const floors = new Array(4).fill(null);
   const floorNum = { first: 0, second: 1, third: 2, fourth: 3 };
   const materialNum = {};
@@ -27,7 +27,7 @@ function parseInput(puzzleInput) {
   return { floors, materialCount };
 }
 
-function solve(state) {
+export function solve(state) {
   const seen = new Set();
   const queue = [[0, state]];
   while (queue.length > 0) {
@@ -84,17 +84,17 @@ function move(state, dest, chips, gens) {
   const newFloors = new Array(4);
   for (let i = 0; i < 4; i++) {
     const [floorChips, floorGens] = floors[i];
-    if (i === e)
+    if (i === e) {
       newFloors[i] = [
         floorChips.filter((c) => !chips.includes(c)),
         floorGens.filter((g) => !gens.includes(g)),
       ];
-    else if (i === dest)
+    } else if (i === dest) {
       newFloors[i] = [
         [...floorChips, ...chips],
         [...floorGens, ...gens],
       ];
-    else newFloors[i] = [floorChips, floorGens];
+    } else newFloors[i] = [floorChips, floorGens];
   }
   return [dest, newFloors];
 }
@@ -102,8 +102,9 @@ function move(state, dest, chips, gens) {
 function isValid(state) {
   const [, floors] = state;
   for (const [chips, gens] of floors) {
-    if (gens.length > 0 && chips.some((chip) => !gens.includes(chip)))
+    if (gens.length > 0 && chips.some((chip) => !gens.includes(chip))) {
       return false;
+    }
   }
   return true;
 }
@@ -131,5 +132,3 @@ function product(arr1, arr2) {
   }
   return result;
 }
-
-module.exports = { parseInput, solve };

@@ -1,13 +1,13 @@
-const { parseInput } = require("./helpers");
+import { parseInput } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   const columns = parseInput(puzzleInput);
-  let count = {};
+  const count = {};
   let clapIdx = 0;
 
   for (let r = 1; r < Infinity; r++) {
-    let clapper = columns[clapIdx].shift();
-    let targetColumn = columns[(clapIdx + 1) % 4];
+    const clapper = columns[clapIdx].shift();
+    const targetColumn = columns[(clapIdx + 1) % 4];
     let moves = Math.abs((clapper % (targetColumn.length * 2)) - 1);
     if (moves > targetColumn.length) {
       moves = targetColumn.length * 2 - moves;
@@ -24,5 +24,3 @@ function part2(puzzleInput) {
 
   return -1;
 }
-
-module.exports = part2;

@@ -1,6 +1,6 @@
-const { parseAsteroids, bestAsteroid } = require("./helpers");
+import { bestAsteroid, parseAsteroids } from "./helpers.js";
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   const { bestAsteroid: station } = bestAsteroid(puzzleInput);
   const [sy, sx] = station;
 
@@ -41,5 +41,3 @@ function part2(puzzleInput) {
   const asteroid200 = vaporized[199];
   return asteroid200.x * 100 + asteroid200.y;
 }
-
-module.exports = part2;

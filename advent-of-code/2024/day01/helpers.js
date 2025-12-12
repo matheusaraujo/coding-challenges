@@ -1,4 +1,4 @@
-const parseInput = (puzzleInput) => {
+export const parseInput = (puzzleInput) => {
   const left = [];
   const right = [];
 
@@ -13,5 +13,3 @@ const parseInput = (puzzleInput) => {
 
   return { left, right };
 };
-
-module.exports = { parseInput };

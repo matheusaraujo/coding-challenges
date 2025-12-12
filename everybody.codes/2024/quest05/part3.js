@@ -1,20 +1,20 @@
-const { parseInput } = require("./helpers");
+import { parseInput } from "./helpers.js";
 
-function part3(puzzleInput) {
+export function part3(puzzleInput) {
   const columns = parseInput(puzzleInput);
-  let count = {};
+  const count = {};
   let clapIdx = 0;
-  let cache = {};
+  const cache = {};
   let topArr = [0, 0, 0, 0];
 
   for (let r = 1; r < Infinity; r++) {
-    let state = columns.map((x) => x.join("")).join("|");
+    const state = columns.map((x) => x.join("")).join("|");
     if (cache[state]) {
       break;
     }
     cache[state] = true;
-    let clapper = columns[clapIdx].shift();
-    let targetColumn = columns[(clapIdx + 1) % 4];
+    const clapper = columns[clapIdx].shift();
+    const targetColumn = columns[(clapIdx + 1) % 4];
     let moves = Math.abs((clapper % (targetColumn.length * 2)) - 1);
     if (moves > targetColumn.length) {
       moves = targetColumn.length * 2 - moves;
@@ -50,5 +50,3 @@ function part3(puzzleInput) {
 
   return topArr.join("");
 }
-
-module.exports = part3;

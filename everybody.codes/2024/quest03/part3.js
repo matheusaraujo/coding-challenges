@@ -1,6 +1,6 @@
-const solve = require("./helpers");
+import { solve } from "./helpers.js";
 
-function part3(puzzleInput) {
+export function part3(puzzleInput) {
   return solve(puzzleInput, [
     [1, 0],
     [-1, 0],
@@ -12,5 +12,3 @@ function part3(puzzleInput) {
     [-1, -1],
   ]);
 }
-
-module.exports = part3;

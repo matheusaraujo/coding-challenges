@@ -1,4 +1,4 @@
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return puzzleInput.filter(supportsTls).length;
 }
 
@@ -28,5 +28,3 @@ function isAbba(str) {
   }
   return false;
 }
-
-module.exports = part1;

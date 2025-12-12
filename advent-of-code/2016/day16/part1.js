@@ -1,9 +1,7 @@
-const { fillDisk, checksum } = require("./helpers.js");
+import { checksum, fillDisk } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   const state = puzzleInput[0];
   const disk = fillDisk(state, 272);
   return checksum(disk);
 }
-
-module.exports = part1;

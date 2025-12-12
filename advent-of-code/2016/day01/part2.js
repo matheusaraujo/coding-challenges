@@ -1,4 +1,4 @@
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   const sequence = puzzleInput[0].split(", ");
   const position = [0, 0];
   const directions = ["N", "E", "S", "W"];
@@ -11,7 +11,7 @@ function part2(puzzleInput) {
 
   visited.add(posKey(position));
 
-  for (let instruction of sequence) {
+  for (const instruction of sequence) {
     const turn = instruction[0];
     const distance = parseInt(instruction.slice(1), 10);
 
@@ -25,8 +25,9 @@ function part2(puzzleInput) {
       else if (directions[directionIndex] === "W") position[0] -= 1;
 
       const key = posKey(position);
-      if (visited.has(key))
+      if (visited.has(key)) {
         return Math.abs(position[0]) + Math.abs(position[1]);
+      }
 
       visited.add(key);
     }
@@ -34,5 +35,3 @@ function part2(puzzleInput) {
 
   return Math.abs(position[0]) + Math.abs(position[1]);
 }
-
-module.exports = part2;

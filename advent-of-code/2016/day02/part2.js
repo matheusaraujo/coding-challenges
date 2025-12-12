@@ -21,16 +21,14 @@ function solve(position, moves) {
   return position;
 }
 
-function part2(puzzleInput) {
+export function part2(puzzleInput) {
   let position = "5";
   let result = "";
 
-  for (let line of puzzleInput) {
+  for (const line of puzzleInput) {
     position = solve(position, line);
     result += position;
   }
 
   return result;
 }
-
-module.exports = part2;

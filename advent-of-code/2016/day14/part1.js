@@ -1,7 +1,5 @@
-const findKeyIndex = require("./helpers");
+import { findKeyIndex } from "./helpers.js";
 
-function part1(puzzleInput) {
+export function part1(puzzleInput) {
   return findKeyIndex(puzzleInput[0], 64);
 }
-
-module.exports = part1;

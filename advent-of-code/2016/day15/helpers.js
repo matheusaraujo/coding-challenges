@@ -1,4 +1,4 @@
-function parseInput(puzzeInput) {
+export function parseInput(puzzeInput) {
   return puzzeInput.map((line) => {
     const match = line.match(
       /Disc #\d+ has (\d+) positions; .* position (\d+)\./,
@@ -7,12 +7,12 @@ function parseInput(puzzeInput) {
   });
 }
 
-function findFirstValidTime(discs) {
+export function findFirstValidTime(discs) {
   let t = 0;
   let step = 1;
 
   discs.forEach(([positions, startPos], i) => {
-    let discIndex = i + 1;
+    const discIndex = i + 1;
     while ((startPos + t + discIndex) % positions !== 0) t += step;
     step *= positions / gcd(step, positions);
   });
@@ -24,5 +24,3 @@ function gcd(a, b) {
   while (b !== 0) [a, b] = [b, a % b];
   return a;
 }
-
-module.exports = { findFirstValidTime, parseInput };

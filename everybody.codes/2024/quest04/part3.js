@@ -1,7 +1,5 @@
-const solve = require("./helpers");
+import { solve } from "./helpers.js";
 
-function part3(puzzleInput) {
+export function part3(puzzleInput) {
   return solve(puzzleInput, (arr) => Math.floor(arr.length / 2));
 }
-
-module.exports = part3;
