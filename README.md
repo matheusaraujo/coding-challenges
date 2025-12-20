@@ -42,6 +42,7 @@
 | `lisp` | 2 |
 | `java` | 2 |
 | `csharp` | 2 |
+| `cpp` | 2 |
 | `c` | 2 |
 | `assembly` | 1 |
 <!-- langs-stats-end -->
