@@ -38,6 +38,7 @@
 | `javascript` | 23 |
 | `typescript` | 17 |
 | `rust` | 5 |
+| `lua` | 2 |
 | `lisp` | 2 |
 | `java` | 2 |
 | `csharp` | 2 |
