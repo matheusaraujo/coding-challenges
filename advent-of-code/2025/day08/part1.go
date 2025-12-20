@@ -2,9 +2,10 @@ package main
 
 import (
 	"sort"
+	"strconv"
 )
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	points := parseInput(puzzleInput)
 	n := len(points)
 	pairs := buildPairs(points)
@@ -39,5 +40,5 @@ func part1(puzzleInput []string) interface{} {
 		}
 	}
 
-	return prod
+	return strconv.Itoa(prod)
 }

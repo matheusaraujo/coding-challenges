@@ -1,6 +1,10 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	barrels := parseInput(puzzleInput)
-	return destroy(barrels, 0, 0) + destroy(barrels, len(barrels)-1, len(barrels[0])-1)
+	return strconv.Itoa(destroy(barrels, 0, 0) + destroy(barrels, len(barrels)-1, len(barrels[0])-1))
 }

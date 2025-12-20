@@ -7,8 +7,10 @@ import {
   Point,
 } from "./helpers";
 
-export function part2(puzzleInput: string[]): any {
-  return solvePart2(puzzleInput.map((line: string) => line.split("")));
+export function part2(puzzleInput: string[]): string {
+  return solvePart2(
+    puzzleInput.map((line: string) => line.split("")),
+  ).toString();
 }
 
 export function solvePart2(map: Grid, start?: Point, end?: Point): number {

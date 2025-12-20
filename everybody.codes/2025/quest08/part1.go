@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	numbers := strings.Split(puzzleInput[0], ",")
 	times := 0
 	for k := 1; k < len(numbers); k++ {
@@ -15,7 +15,7 @@ func part1(puzzleInput []string) interface{} {
 			times++
 		}
 	}
-	return times
+	return strconv.Itoa(times)
 }
 
 func passThroughTheCenter(i, j, n int) bool {

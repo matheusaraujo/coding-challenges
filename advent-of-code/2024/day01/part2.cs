@@ -2,7 +2,7 @@ namespace PuzzleBox;
 
 public static class Part2
 {
-    public static object Solve(string puzzleInput)
+    public static string Solve(List<string> puzzleInput)
     {
         var (left, right) = Helpers.ParseInput(puzzleInput);
 
@@ -10,6 +10,6 @@ public static class Part2
 
         var result = right.Where(count.ContainsKey).Sum(item => item * count[item]);
 
-        return result;
+        return result.ToString();
     }
 }

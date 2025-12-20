@@ -7,9 +7,9 @@ import (
 
 const SHAPES = 6
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	shapes, regions := parseInput(puzzleInput)
-	return solve(shapes, regions)
+	return strconv.Itoa(solve(shapes, regions))
 }
 
 func parseInput(puzzleInput []string) ([]int, [][]int) {

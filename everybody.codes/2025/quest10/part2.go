@@ -1,27 +1,31 @@
 package main
 
-func part2(board []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	turns := 20
 
-	d := dragonPositions(turns, len(board), len(board[0]))
+	d := dragonPositions(turns, len(puzzleInput), len(puzzleInput[0]))
 	eaten := make(map[int]bool)
 
-	for idx, s := range sheep(board) {
+	for idx, s := range sheep(puzzleInput) {
 		for t := 1; t <= turns; t++ {
 			i1 := s.i + (t - 1)
 			i2 := s.i + t
-			if eaten[idx] || i1 >= len(board) || i2 >= len(board) {
+			if eaten[idx] || i1 >= len(puzzleInput) || i2 >= len(puzzleInput) {
 				break
 			}
 
-			if (d[t][position{i1, s.j}] && board[i1][s.j] != '#') ||
-				(d[t][position{i2, s.j}] && board[i2][s.j] != '#') {
+			if (d[t][position{i1, s.j}] && puzzleInput[i1][s.j] != '#') ||
+				(d[t][position{i2, s.j}] && puzzleInput[i2][s.j] != '#') {
 				eaten[idx] = true
 			}
 		}
 	}
 
-	return len(eaten)
+	return strconv.Itoa(len(eaten))
 }
 
 func dragonPositions(turns, m, n int) []map[position]bool {

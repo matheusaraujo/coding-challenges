@@ -1,6 +1,10 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	lines := parseInput(puzzleInput)
 	intersections := 0
 
@@ -12,5 +16,5 @@ func part2(puzzleInput []string) interface{} {
 		}
 	}
 
-	return intersections
+	return strconv.Itoa(intersections)
 }

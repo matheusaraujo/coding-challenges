@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
-func part3(board []string) int {
+func part3(board []string) string {
 	d := dragon(board)
 	s := sheepColumns(board)
 	m := map[string]int{}
 
-	return dfs(board, m, d, s, 'S')
+	return strconv.Itoa(dfs(board, m, d, s, 'S'))
 }
 
 func sheepColumns(board []string) []int {

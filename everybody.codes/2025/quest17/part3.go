@@ -3,6 +3,7 @@ package main
 import (
 	"container/heap"
 	"math"
+	"strconv"
 )
 
 type Cell struct {
@@ -95,14 +96,14 @@ func dijkstra(startR, startC, rad int, goLeft bool) map[int]int {
 	return D
 }
 
-func part3(grid []string) interface{} {
-	R = len(grid)
-	C = len(grid[0])
+func part3(puzzleInput []string) string {
+	R = len(puzzleInput)
+	C = len(puzzleInput[0])
 	G = make([][]int, R)
 
 	var sr, sc int
 
-	for r, line := range grid {
+	for r, line := range puzzleInput {
 		G[r] = make([]int, C)
 		for c, char := range line {
 			charStr := string(char)
@@ -111,7 +112,7 @@ func part3(grid []string) interface{} {
 			} else if charStr == "S" {
 				sr, sc = r, c
 			} else {
-				G[r][c] = atoi(grid, r, c)
+				G[r][c] = atoi(puzzleInput, r, c)
 			}
 		}
 	}
@@ -140,9 +141,9 @@ func part3(grid []string) interface{} {
 		}
 
 		if found && score < timeLimit {
-			return rad * score
+			return strconv.Itoa(rad * score)
 		}
 	}
 
-	return 0
+	return ""
 }

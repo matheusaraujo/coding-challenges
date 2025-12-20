@@ -1,5 +1,5 @@
-export function part3(puzzleInput: string[]): any {
-  return solve(parseInt(puzzleInput[0]), 10, 202400000);
+export function part3(puzzleInput: string[]): string {
+  return solve(parseInt(puzzleInput[0]), 10, 202400000).toString();
 }
 
 const solve = (hp = 2, hpa = 5, blocks = 160) => {

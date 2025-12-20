@@ -1,10 +1,14 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	turns := 20252025
 	numbers := buildNumbers2(puzzleInput)
 	spot := turns % len(numbers)
-	return numbers[spot]
+	return strconv.Itoa(numbers[spot])
 }
 
 func buildNumbers2(puzzleInput []string) []int {

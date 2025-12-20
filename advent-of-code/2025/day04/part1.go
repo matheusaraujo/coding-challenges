@@ -1,6 +1,10 @@
 package main
 
-func part1(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part1(puzzleInput []string) string {
 	result := 0
 
 	for i := 0; i < len(puzzleInput); i++ {
@@ -11,5 +15,5 @@ func part1(puzzleInput []string) interface{} {
 		}
 	}
 
-	return result
+	return strconv.Itoa(result)
 }

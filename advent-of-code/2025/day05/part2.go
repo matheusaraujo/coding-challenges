@@ -1,8 +1,12 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	intervals, _ := parseInput(puzzleInput)
-	return merge(intervals)
+	return strconv.Itoa(merge(intervals))
 }
 
 func merge(intervals []Interval) int {

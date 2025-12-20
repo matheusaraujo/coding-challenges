@@ -2,9 +2,9 @@ namespace PuzzleBox;
 
 public static class Part1
 {
-    public static object Solve(string puzzleInput)
+    public static string Solve(List<string> puzzleInput)
     {
-        return puzzleInput.Count('(') - puzzleInput.Count(')');
+        return (puzzleInput[0].Count('(') - puzzleInput[0].Count(')')).ToString();
     }
 
     static int Count(this string input, char target)

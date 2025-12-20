@@ -1,6 +1,6 @@
 import { parseInput, scoreLine } from "./helpers";
 
-export function part3(puzzleInput: string[]): any {
+export function part3(puzzleInput: string[]): string {
   const { wheels: initialWheels, jumps } = parseInput(puzzleInput);
   let wheels = initialWheels;
 

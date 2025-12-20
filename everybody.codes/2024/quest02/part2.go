@@ -1,10 +1,11 @@
 package main
 
 import (
+	"strconv"
 	"strings"
 )
 
-func part2(puzzleInput []string) interface{} {
+func part2(puzzleInput []string) string {
 	runics, inscriptions := parseInput(puzzleInput)
 	result := 0
 
@@ -19,7 +20,7 @@ func part2(puzzleInput []string) interface{} {
 		result += len(m)
 	}
 
-	return result
+	return strconv.Itoa(result)
 }
 
 func matches(insc, pat string, m map[int]bool) {

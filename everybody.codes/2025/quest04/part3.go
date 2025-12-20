@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func part3(puzzleInput []string) interface{} {
+func part3(puzzleInput []string) string {
 	teeth := parseInputPart3(puzzleInput)
 	var ratio float64 = 100
 

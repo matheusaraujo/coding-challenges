@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	a := newComplexNumber(puzzleInput[0])
 	r := newComplexNumber("[0,0]")
 	d := newComplexNumber("[10,10]")

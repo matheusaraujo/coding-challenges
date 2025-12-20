@@ -1,6 +1,6 @@
 import { getIthLine, GOAL, lcm, parseInput, scoreLine } from "./helpers";
 
-export function part2(puzzleInput: string[]): any {
+export function part2(puzzleInput: string[]): string {
   const { wheels: initialWheels, jumps } = parseInput(puzzleInput);
   let wheels = initialWheels;
 
@@ -27,5 +27,5 @@ export function part2(puzzleInput: string[]): any {
     if (i === loopRemainder) scoreRem = scoreLoop;
   }
 
-  return scoreLoop * loopCount + scoreRem;
+  return (scoreLoop * loopCount + scoreRem).toString();
 }

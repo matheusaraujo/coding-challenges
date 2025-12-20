@@ -1,6 +1,10 @@
 package main
 
-func part1(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part1(puzzleInput []string) string {
 	dial, size, count := 50, 100, 0
 	for _, rotation := range puzzleInput {
 		dir, steps := parseInput(rotation)
@@ -9,11 +13,11 @@ func part1(puzzleInput []string) interface{} {
 			steps = -steps
 		}
 
-		dial = mod(dial + steps, size)
-		
+		dial = mod(dial+steps, size)
+
 		if dial == 0 {
 			count++
 		}
 	}
-	return count
+	return strconv.Itoa(count)
 }

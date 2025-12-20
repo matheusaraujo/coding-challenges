@@ -2,9 +2,10 @@ package main
 
 import (
 	"math"
+	"strconv"
 )
 
-func part2(puzzleInput []string) interface{} {
+func part2(puzzleInput []string) string {
 	sizes := parseInput(puzzleInput[0])
 	mc := math.MaxInt
 
@@ -13,7 +14,7 @@ func part2(puzzleInput []string) interface{} {
 		mc = min(mc, c)
 	}
 
-	return mc
+	return strconv.Itoa(mc)
 }
 
 func find(sizes []int, start int) int {

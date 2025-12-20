@@ -2,12 +2,12 @@ namespace PuzzleBox;
 
 public static class Helpers
 {
-    public static (List<int>, List<int>) ParseInput(string puzzleInput)
+    public static (List<int>, List<int>) ParseInput(List<string> puzzleInput)
     {
         List<int> left = new(),
             right = new();
 
-        foreach (var line in puzzleInput.Trim().Split('\n'))
+        foreach (var line in puzzleInput)
         {
             var parts = line.Split("   ");
             left.Add(int.Parse(parts[0]));

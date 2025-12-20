@@ -11,7 +11,7 @@ func parseInput(line string) (byte, int) {
 	return dir, steps
 }
 
-// go % funcion returns negative when x is negative, 
+// go % funcion returns negative when x is negative,
 // this function returns positive
 func mod(x, y int) int {
 	a := x % y

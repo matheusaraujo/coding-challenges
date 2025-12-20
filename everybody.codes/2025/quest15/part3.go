@@ -7,9 +7,9 @@ import (
 	"strings"
 )
 
-func part3(puzzleInput []string) int {
+func part3(puzzleInput []string) string {
 	turns, amounts := parseInput3(puzzleInput)
-	return solve(turns, amounts)
+	return strconv.Itoa(solve(turns, amounts))
 }
 
 func parseInput3(puzzleInput []string) ([]byte, []int) {

@@ -12,7 +12,7 @@ func abs(n int) int {
 	return -n
 }
 
-func part3(puzzleInput []string) interface{} {
+func part3(puzzleInput []string) string {
 	names := strings.Split(puzzleInput[0], ",")
 	instructions := strings.Split(puzzleInput[2], ",")
 	position := 0

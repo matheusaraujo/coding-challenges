@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	names := strings.Split(puzzleInput[0], ",")
 	instructions := strings.Split(puzzleInput[2], ",")
 	position := 0

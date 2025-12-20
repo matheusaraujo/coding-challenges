@@ -1,6 +1,10 @@
 package main
 
-func part3(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part3(puzzleInput []string) string {
 	lines := parseInput(puzzleInput)
 	maxIntersections, n := 0, 256
 
@@ -16,5 +20,5 @@ func part3(puzzleInput []string) interface{} {
 		}
 	}
 
-	return maxIntersections
+	return strconv.Itoa(maxIntersections)
 }

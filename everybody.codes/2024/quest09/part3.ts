@@ -1,6 +1,6 @@
 import { dp } from "./helpers";
 
-export function part3(puzzleInput: string[]): number {
+export function part3(puzzleInput: string[]): string {
   const targets = puzzleInput.map((v) => parseInt(v, 10));
   const maxTarget = Math.max(...targets);
 
@@ -27,5 +27,5 @@ export function part3(puzzleInput: string[]): number {
     totalMinBeetles += minBeetlesForT;
   }
 
-  return totalMinBeetles;
+  return totalMinBeetles.toString();
 }

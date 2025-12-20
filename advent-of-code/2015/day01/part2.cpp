@@ -13,5 +13,5 @@ std::string part2(const std::vector<std::string> &puzzleInput) {
     }
   }
 
-  return "-1";
+  return "0";
 }

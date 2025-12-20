@@ -5,9 +5,9 @@ import (
 	"strconv"
 )
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	input, _ := strconv.Atoi(puzzleInput[0])
-	return distance(input)
+	return strconv.Itoa(distance(input))
 }
 
 func distance(n int) int {

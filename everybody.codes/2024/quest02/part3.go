@@ -1,10 +1,14 @@
 package main
 
+import (
+	"strconv"
+)
+
 type pos struct {
 	i, j int
 }
 
-func part3(puzzleInput []string) interface{} {
+func part3(puzzleInput []string) string {
 	runics, inscriptions := parseInput(puzzleInput)
 
 	m := make(map[pos](bool))
@@ -18,7 +22,7 @@ func part3(puzzleInput []string) interface{} {
 			}
 		}
 	}
-	return len(m)
+	return strconv.Itoa(len(m))
 }
 
 func match2d(inscriptions []string, i, j int, r string, d int, m map[pos]bool) {

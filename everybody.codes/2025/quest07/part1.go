@@ -1,6 +1,6 @@
 package main
 
-func part1(puzzleInput []string) interface{} {
+func part1(puzzleInput []string) string {
 	names, m := parseInput(puzzleInput)
 
 	for _, name := range names {
@@ -9,5 +9,5 @@ func part1(puzzleInput []string) interface{} {
 		}
 	}
 
-	return nil
+	return ""
 }

@@ -1,18 +1,22 @@
 package main
 
-func part1(board []string) interface{} {
+import (
+	"strconv"
+)
+
+func part1(puzzleInput []string) string {
 	seen := make(map[position]bool)
 	result := 0
-	move(board, position{i: len(board) / 2, j: len(board[0]) / 2}, seen, 0, 4)
+	move(puzzleInput, position{i: len(puzzleInput) / 2, j: len(puzzleInput[0]) / 2}, seen, 0, 4)
 
-	for i := 0; i < len(board); i++ {
-		for j := 0; j < len(board[0]); j++ {
-			if seen[position{i, j}] && board[i][j] == 'S' {
+	for i := 0; i < len(puzzleInput); i++ {
+		for j := 0; j < len(puzzleInput[0]); j++ {
+			if seen[position{i, j}] && puzzleInput[i][j] == 'S' {
 				result++
 			}
 		}
 	}
-	return result
+	return strconv.Itoa(result)
 }
 
 func move(board []string, p position, seen map[position]bool, d int, md int) int {

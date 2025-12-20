@@ -2,17 +2,17 @@ namespace PuzzleBox;
 
 public static class Part2
 {
-    public static object Solve(string puzzleInput)
+    public static string Solve(List<string> puzzleInput)
     {
         int floor = 0;
 
-        for (int i = 0; i < puzzleInput.Length; i++)
+        for (int i = 0; i < puzzleInput[0].Length; i++)
         {
-            floor += puzzleInput[i] == '(' ? 1 : -1;
+            floor += puzzleInput[0][i] == '(' ? 1 : -1;
             if (floor == -1)
-                return i + 1;
+                return (i + 1).ToString();
         }
 
-        return 0;
+        return "0";
     }
 }

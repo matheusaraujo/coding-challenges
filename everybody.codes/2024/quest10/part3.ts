@@ -1,6 +1,6 @@
 import { power, runicWord } from "./helpers";
 
-export function part3(puzzleInput: string[]): any {
+export function part3(puzzleInput: string[]): string {
   let result = 0,
     prev = -1;
   const gridInput = puzzleInput.map((row) => row.split(""));

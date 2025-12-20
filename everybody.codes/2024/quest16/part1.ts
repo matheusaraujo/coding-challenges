@@ -1,6 +1,6 @@
 import { getIthLine, parseInput } from "./helpers";
 
-export function part1(puzzleInput: string[]): any {
+export function part1(puzzleInput: string[]): string {
   const { wheels: initialWheels, jumps } = parseInput(puzzleInput);
   let wheels = initialWheels;
 
@@ -9,5 +9,5 @@ export function part1(puzzleInput: string[]): any {
     return wheel.map((_, i) => wheel[(i * dist) % wheel.length]);
   });
 
-  return getIthLine(100, wheels);
+  return getIthLine(100, wheels).toString();
 }

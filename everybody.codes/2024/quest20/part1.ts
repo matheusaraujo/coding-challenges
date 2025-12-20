@@ -1,6 +1,6 @@
 import { CHANGES, processStep } from "./helpers";
 
-export function part1(puzzleInput: string[]): any {
+export function part1(puzzleInput: string[]): string {
   const grid = puzzleInput.map((line) => line.split(""));
   const width = grid[0].length,
     height = grid.length;

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func solve(puzzleInput []string, check func(string) bool) interface{} {
+func solve(puzzleInput []string, check func(string) bool) int {
 	pairs := strings.Split(puzzleInput[0], ",")
 	result := 0
 	for _, pair := range pairs {

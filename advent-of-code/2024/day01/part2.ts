@@ -4,7 +4,7 @@ type CountMap = {
   [key: number]: number;
 };
 
-export function part2(puzzleInput: string[]): any {
+export function part2(puzzleInput: string[]): string {
   const { left, right } = parseInput(puzzleInput);
 
   const count: CountMap = left.reduce((acc: CountMap, value: number) => {
@@ -12,12 +12,14 @@ export function part2(puzzleInput: string[]): any {
     return acc;
   }, {});
 
-  return right.reduce((sum: number, item: number) => {
-    if (count[item]) {
-      sum += item * count[item];
-    }
-    return sum;
-  }, 0);
+  return right
+    .reduce((sum: number, item: number) => {
+      if (count[item]) {
+        sum += item * count[item];
+      }
+      return sum;
+    }, 0)
+    .toString();
 }
 
 export default part2;

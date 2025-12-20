@@ -1,6 +1,6 @@
 import { Device, parseInput } from "./helpers";
 
-export function part2(puzzleInput: string[]): any {
+export function part2(puzzleInput: string[]): string {
   const racetrack =
     "-=++=-==++=++=-=+=-=+=+=--=-=++=-==++=-+=-=+=-=+=+=++=-+==++=++=-=-=---=++==--+++==++=+=--==++==+++=++=+++=--=+=-=+=-+=-+=-+-=+=-=+=-+++=+==++++==---=+=+=-S";
   return simulate(parseInput(puzzleInput), racetrack, 10);

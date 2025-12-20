@@ -1,6 +1,6 @@
 import { Device, parseInput } from "./helpers";
 
-export function part1(puzzleInput: string[]): any {
+export function part1(puzzleInput: string[]): string {
   return simulate(parseInput(puzzleInput), 10);
 }
 

@@ -1,6 +1,10 @@
 package main
 
-func part1(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part1(puzzleInput []string) string {
 	intervals, nums := parseInput(puzzleInput)
 	count := 0
 
@@ -13,5 +17,5 @@ func part1(puzzleInput []string) interface{} {
 		}
 	}
 
-	return count
+	return strconv.Itoa(count)
 }

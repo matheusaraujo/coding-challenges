@@ -1,6 +1,10 @@
 package main
 
-func part2(puzzleInput []string) int {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	left, right := parseInput(puzzleInput)
 
 	count := make(map[int]int)
@@ -14,5 +18,5 @@ func part2(puzzleInput []string) int {
 			result += item * countValue
 		}
 	}
-	return result
+	return strconv.Itoa(result)
 }

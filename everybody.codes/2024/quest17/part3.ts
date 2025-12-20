@@ -1,6 +1,6 @@
 import { distance, Edge, parseInput, UnionFind } from "./helpers";
 
-export function part3(puzzleInput: string[]): number {
+export function part3(puzzleInput: string[]): string {
   const stars = parseInput(puzzleInput);
   const numStars = stars.length;
 
@@ -60,5 +60,6 @@ export function part3(puzzleInput: string[]): number {
 
   return constellationSizes
     .slice(0, 3)
-    .reduce((product, size) => product * size, 1);
+    .reduce((product, size) => product * size, 1)
+    .toString();
 }

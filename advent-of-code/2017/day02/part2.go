@@ -1,6 +1,10 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	numbers := parseInput(puzzleInput)
 	checksum := 0
 	for _, row := range numbers {
@@ -13,5 +17,5 @@ func part2(puzzleInput []string) interface{} {
 			}
 		}
 	}
-	return checksum
+	return strconv.Itoa(checksum)
 }

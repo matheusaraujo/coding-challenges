@@ -2,9 +2,10 @@ package main
 
 import (
 	"container/list"
+	"strconv"
 )
 
-func part3(puzzleInput []string) int {
+func part3(puzzleInput []string) string {
 	grid0 := toByteGrid(puzzleInput)
 	grid1 := rotate(grid0, '.')
 	grid2 := rotate(grid1, '.')
@@ -50,7 +51,7 @@ func part3(puzzleInput []string) int {
 		layer := cost % 3
 
 		if grids[layer][y][x] == 'E' {
-			return cost
+			return strconv.Itoa(cost)
 		}
 
 		nextCost := cost + 1
@@ -89,7 +90,7 @@ func part3(puzzleInput []string) int {
 		}
 	}
 
-	return -1
+	return "-1"
 }
 
 func rotate(grid [][]byte, def byte) [][]byte {

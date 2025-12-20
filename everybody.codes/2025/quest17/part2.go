@@ -1,8 +1,12 @@
 package main
 
+import (
+	"strconv"
+)
+
 // dumb brute force solution
-func part2(grid []string) interface{} {
-	n := len(grid)
+func part2(puzzleInput []string) interface{} {
+	n := len(puzzleInput)
 	xc, yc, rmx, tmx := n/2, n/2, 0, 0
 
 	prevTot := 0
@@ -11,7 +15,7 @@ func part2(grid []string) interface{} {
 		for x := 0; x < n; x++ {
 			for y := 0; y < n; y++ {
 				if innerCircle(x, y, xc, yc, r) {
-					tot += atoi(grid, x, y)
+					tot += atoi(puzzleInput, x, y)
 				}
 			}
 		}
@@ -23,5 +27,5 @@ func part2(grid []string) interface{} {
 		prevTot += tot
 	}
 
-	return tmx * rmx
+	return strconv.Itoa(tmx * rmx)
 }

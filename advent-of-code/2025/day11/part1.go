@@ -1,9 +1,13 @@
 package main
 
-func part1(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part1(puzzleInput []string) string {
 	graph := parseInput(puzzleInput)
 	visited := make(map[string]bool)
-	return dfs("you", "out", graph, visited)
+	return strconv.Itoa(dfs("you", "out", graph, visited))
 }
 
 func dfs(node, target string, graph map[string][]string, visited map[string]bool) int {

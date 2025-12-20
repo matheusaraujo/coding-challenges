@@ -1,6 +1,10 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	operations := make([]rune, 0)
 	idx := make([]int, 0)
 	n := len(puzzleInput) - 1
@@ -44,5 +48,5 @@ func part2(puzzleInput []string) interface{} {
 		result += column
 	}
 
-	return result
+	return strconv.Itoa(result)
 }

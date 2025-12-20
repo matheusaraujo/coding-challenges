@@ -1,6 +1,10 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
 	columns, _ := parseInput(puzzleInput)
 
 	phase, t := 1, 0
@@ -22,12 +26,12 @@ func part2(puzzleInput []string) interface{} {
 			}
 		}
 		if balanced == 1 {
-			return t - 1
+			return strconv.Itoa(t - 1)
 		}
 		if moved == 0 {
 			phase = 2
 		}
 		t++
 	}
-	return 0
+	return "0"
 }

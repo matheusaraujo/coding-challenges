@@ -2,6 +2,7 @@ package main
 
 import (
 	"slices"
+	"strconv"
 )
 
 func compare(a sword, b sword) int {
@@ -34,7 +35,7 @@ func compare(a sword, b sword) int {
 	}
 }
 
-func part3(puzzleInput []string) interface{} {
+func part3(puzzleInput []string) string {
 	swords := make([]sword, len(puzzleInput))
 	for i := 0; i < len(puzzleInput); i++ {
 		swords[i] = buildSword(puzzleInput[i])
@@ -47,5 +48,5 @@ func part3(puzzleInput []string) interface{} {
 		checksum += (i + 1) * swords[i].id
 	}
 
-	return checksum
+	return strconv.Itoa(checksum)
 }

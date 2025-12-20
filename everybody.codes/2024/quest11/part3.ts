@@ -1,6 +1,6 @@
 import { parseInput, solve } from "./helpers";
 
-export function part3(puzzleInput: string[]): any {
+export function part3(puzzleInput: string[]): string {
   const dict = parseInput(puzzleInput);
   let min = Number.MAX_SAFE_INTEGER,
     max = Number.MIN_SAFE_INTEGER;
@@ -11,5 +11,5 @@ export function part3(puzzleInput: string[]): any {
     max = Math.max(max, x);
   }
 
-  return max - min;
+  return (max - min).toString();
 }

@@ -1,5 +1,9 @@
 package main
 
-func part2(puzzleInput []string) interface{} {
-	return solve(parseInput(puzzleInput))
+import (
+	"strconv"
+)
+
+func part2(puzzleInput []string) string {
+	return strconv.Itoa(solve(parseInput(puzzleInput)))
 }

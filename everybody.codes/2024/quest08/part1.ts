@@ -1,5 +1,5 @@
-export function part1(puzzleInput: string[]): any {
-  return solve(parseInt(puzzleInput[0]));
+export function part1(puzzleInput: string[]): string {
+  return solve(parseInt(puzzleInput[0])).toString();
 }
 
 function solve(n: number): number {
