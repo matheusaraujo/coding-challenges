@@ -1,7 +1,7 @@
 use super::helpers::parse_input;
-use crate::{Answer, answer};
+use crate::{Any, any};
 
-pub fn part1(puzzle_input: &[String]) -> Answer {
+pub fn part1(puzzle_input: &[String]) -> Any {
     let (mut left, mut right) = parse_input(puzzle_input);
     
     left.sort();
@@ -12,5 +12,5 @@ pub fn part1(puzzle_input: &[String]) -> Answer {
         .map(|(&l, &r)| (l - r).abs())
         .sum();
 
-    answer(sum)
+    any(sum)
 }

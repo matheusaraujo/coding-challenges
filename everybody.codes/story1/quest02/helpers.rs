@@ -14,31 +14,25 @@ pub struct TreeNode {
 }
 
 fn insert_node(root: &NodePtr, rank: i32, symbol: char) -> NodePtr {
-    let mut node = root.borrow_mut();
-
-    if rank < node.rank {
-        if let Some(ref left) = node.left {
-            insert_node(left, rank, symbol)
+    let next_node = {
+        let node = root.borrow_mut();
+        if rank < node.rank {
+            node.left.as_ref().map(Rc::clone)
         } else {
-            let new_node = Rc::new(RefCell::new(TreeNode {
-                rank,
-                symbol,
-                left: None,
-                right: None,
-            }));
-            node.left = Some(Rc::clone(&new_node));
-            new_node
+            node.right.as_ref().map(Rc::clone)
         }
-    } else if let Some(ref right) = node.right {
-        insert_node(right, rank, symbol)
+    };
+
+    if let Some(next) = next_node {
+        insert_node(&next, rank, symbol)
     } else {
-        let new_node = Rc::new(RefCell::new(TreeNode {
-            rank,
-            symbol,
-            left: None,
-            right: None,
-        }));
-        node.right = Some(Rc::clone(&new_node));
+        let mut node = root.borrow_mut();
+        let new_node = Rc::new(RefCell::new(TreeNode { rank, symbol, left: None, right: None }));
+        if rank < node.rank {
+            node.left = Some(Rc::clone(&new_node));
+        } else {
+            node.right = Some(Rc::clone(&new_node));
+        }
         new_node
     }
 }

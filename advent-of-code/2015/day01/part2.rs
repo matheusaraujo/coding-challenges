@@ -1,6 +1,6 @@
-use crate::{Answer, answer};
+use crate::{Any, any};
 
-pub fn part2(puzzle_input: &[String]) -> Answer {
+pub fn part2(puzzle_input: &[String]) -> Any {
     let mut floor = 1;
 
     for (i, c) in puzzle_input[0].chars().enumerate() {
@@ -11,9 +11,9 @@ pub fn part2(puzzle_input: &[String]) -> Answer {
         }
 
         if floor == -1 {
-            return answer(i);
+            return any(i);
         }
     }
 
-    answer(-1)
+    any(-1)
 }

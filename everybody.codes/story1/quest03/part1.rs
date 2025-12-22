@@ -1,6 +1,7 @@
+use crate::{Any, any};
 use super::helpers::SnailClock;
 
-pub fn part1(puzzle_input: &[String]) -> String {
+pub fn part1(puzzle_input: &[String]) -> Any {
     let clock = SnailClock::from_input(puzzle_input);
     let sum: i128 = clock
         .snails
@@ -13,5 +14,5 @@ pub fn part1(puzzle_input: &[String]) -> String {
             nx + (100 * ny)
         })
         .sum();
-    sum.to_string()
+    any(sum)
 }

@@ -13,5 +13,5 @@ void *part1(char **puzzle_input, int size) {
     result += abs(left[i] - right[i]);
   }
 
-  return answer(result);
+  return any(result);
 }

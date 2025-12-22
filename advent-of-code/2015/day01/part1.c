@@ -7,5 +7,5 @@ void *part1(char **puzzle_input) {
     count += puzzle_input[0][i] == '(' ? 1 : -1;
   }
 
-  return answer(count);
+  return any(count);
 }

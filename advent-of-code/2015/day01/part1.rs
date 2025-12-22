@@ -1,9 +1,9 @@
-use crate::{Answer, answer};
+use crate::{Any, any};
 
-pub fn part1(puzzle_input: &[String]) -> Answer {
+pub fn part1(puzzle_input: &[String]) -> Any {
     let line = puzzle_input.first().map(|s| s.as_str()).unwrap_or("");
 
-    let result = line.chars().fold(0i32, |acc, c| {
+    let result:i32 = line.chars().fold(0i32, |acc, c| {
         match c {
             '(' => acc + 1,
             ')' => acc - 1,
@@ -11,5 +11,5 @@ pub fn part1(puzzle_input: &[String]) -> Answer {
         }
     });
 
-    answer(result)
+    any(result)
 }

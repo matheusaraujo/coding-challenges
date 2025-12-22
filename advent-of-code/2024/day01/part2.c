@@ -20,5 +20,5 @@ void *part2(char **puzzle_input, int size) {
     result += left[i] * count[left[i]];
   }
 
-  return answer(result);
+  return any(result);
 }

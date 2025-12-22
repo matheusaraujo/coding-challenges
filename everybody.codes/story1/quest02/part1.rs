@@ -1,6 +1,6 @@
 use super::helpers::solve;
-use crate::{Answer, answer};
+use crate::{Any, any};
 
-pub fn part1(puzzle_input: &[String]) -> Answer {
-    answer(solve(puzzle_input, None, true))
+pub fn part1(puzzle_input: &[String]) -> Any {
+    any(solve(puzzle_input, None, true))
 }

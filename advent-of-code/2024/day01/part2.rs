@@ -1,8 +1,8 @@
 use super::helpers::parse_input;
-use crate::{Answer, answer};
+use crate::{Any, any};
 use std::collections::HashMap;
 
-pub fn part2(puzzle_input: &[String]) -> Answer {
+pub fn part2(puzzle_input: &[String]) -> Any {
     let (left, right) = parse_input(puzzle_input);
 
     let mut counts = HashMap::new();
@@ -14,5 +14,5 @@ pub fn part2(puzzle_input: &[String]) -> Answer {
         .map(|&l| l * counts.get(&l).unwrap_or(&0))
         .sum();
 
-    answer(result)
+    any(result)
 }

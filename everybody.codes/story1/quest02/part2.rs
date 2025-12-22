@@ -1,9 +1,9 @@
 use super::helpers::TreeNode;
 use super::helpers::solve;
-use crate::{Answer, answer};
+use crate::{Any, any};
 
-pub fn part2(puzzle_input: &[String]) -> Answer {
-    answer(solve(puzzle_input, Some(swap), true))
+pub fn part2(puzzle_input: &[String]) -> Any {
+    any(solve(puzzle_input, Some(swap), true))
 }
 
 fn swap(a: &mut TreeNode, b: &mut TreeNode) {
