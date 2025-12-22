@@ -1,6 +1,20 @@
 # coding-challenges
 > Using https://github.com/matheusaraujo/puzzle-box
 
+[![Advent of Code 2015](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2015.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2015.yaml)
+[![Advent of Code 2016](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2016.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2016.yaml)
+[![Advent of Code 2017](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2017.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2017.yaml)
+[![Advent of Code 2018](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2018.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2018.yaml)
+[![Advent of Code 2019](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2019.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2019.yaml)
+[![Advent of Code 2020](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2020.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2020.yaml)
+[![Advent of Code 2023](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2023.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2023.yaml)
+[![Advent of Code 2024](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2024.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2024.yaml)
+[![Advent of Code 2025](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2025.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/aoc-2025.yaml)
+[![Everybody Codes 2024](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-2024.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-2024.yaml)
+[![Everybody Codes 2025](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-2025.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-2025.yaml)
+[![Everybody Codes story1](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story1.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story1.yaml)
+[![Everybody Codes story2](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story2.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story2.yaml)
+
 <!-- progress-begin -->
 
 ## Advent of Code
