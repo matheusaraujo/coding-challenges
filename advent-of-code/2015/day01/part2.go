@@ -1,11 +1,7 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
-	floor := 0
+func part2(puzzleInput []string) any {
+	floor := 1
 	for i, c := range puzzleInput[0] {
 		if c == '(' {
 			floor++
@@ -15,8 +11,8 @@ func part2(puzzleInput []string) string {
 		}
 
 		if floor == -1 {
-			return strconv.Itoa(i + 1)
+			return i
 		}
 	}
-	return "0"
+	return -1
 }

@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	points := parseInput(puzzleInput)
 	n := len(points)
 
@@ -16,10 +12,10 @@ func part2(puzzleInput []string) string {
 		if d.union(pr.i, pr.j) {
 			components--
 			if components == 1 {
-				return strconv.Itoa(points[pr.i].x * points[pr.j].x)
+				return points[pr.i].x * points[pr.j].x
 			}
 		}
 	}
 
-	return "0"
+	return 0
 }

@@ -1,15 +1,11 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	blocks := parseInput(puzzleInput)
 	spell := findSpell(blocks)
 
 	n := 202520252025000
-	return strconv.Itoa(search(1, n/2, 0, 0, spell, n))
+	return search(1, n/2, 0, 0, spell, n)
 }
 
 func search(minWall, maxWall, previousRes, previousWall int, spell []int, blocks int) int {

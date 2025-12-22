@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	dial, size, count := 50, 100, 0
 
 	for _, line := range puzzleInput {
@@ -31,5 +27,5 @@ func part2(puzzleInput []string) string {
 		dial = mod(dial+steps, size)
 	}
 
-	return strconv.Itoa(count)
+	return count
 }

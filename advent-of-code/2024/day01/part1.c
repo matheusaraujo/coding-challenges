@@ -3,7 +3,7 @@
 #include "helpers.h"
 #include "pb_helpers.h"
 
-char *part1(char **puzzle_input, int size) {
+void *part1(char **puzzle_input, int size) {
   int result = 0;
   int left[size + 1], right[size + 1];
 
@@ -13,5 +13,5 @@ char *part1(char **puzzle_input, int size) {
     result += abs(left[i] - right[i]);
   }
 
-  return pb_int_to_str(result);
+  return answer(result);
 }

@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	columns, _ := parseInput(puzzleInput)
 
 	phase := 1
@@ -25,7 +21,7 @@ func part1(puzzleInput []string) string {
 			phase = 2
 		}
 	}
-	return strconv.Itoa(checksum(columns))
+	return checksum(columns)
 }
 
 func checksum(columns []int) int {

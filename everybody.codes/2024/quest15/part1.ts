@@ -1,6 +1,6 @@
 import { DistanceCache, distanceMap, Grid, Point } from "./helpers";
 
-export function part1(puzzleInput: string[]): string {
+export function part1(puzzleInput: string[]): any {
   const map: Grid = puzzleInput.map((line) => line.split(""));
   const cache: DistanceCache = {};
 
@@ -17,5 +17,5 @@ export function part1(puzzleInput: string[]): string {
 
   const dmap = distanceMap(map, start, cache);
 
-  return (2 * Math.min(...fruits.map((f) => dmap[f.p[1]][f.p[0]]))).toString();
+  return 2 * Math.min(...fruits.map((f) => dmap[f.p[1]][f.p[0]]));
 }

@@ -1,15 +1,18 @@
+#include <any>
 #include <string>
 #include <unordered_map>
 #include <vector>
 
-void parseInput(const std::vector<std::string> &puzzleInput,
-                std::vector<int> &left, std::vector<int> &right);
+using namespace std;
 
-std::string part2(const std::vector<std::string> &puzzleInput) {
-  std::vector<int> left, right;
+void parseInput(const vector<string> &puzzleInput, vector<int> &left,
+                vector<int> &right);
+
+any part2(const vector<string> &puzzleInput) {
+  vector<int> left, right;
   parseInput(puzzleInput, left, right);
 
-  std::unordered_map<int, int> countMap;
+  unordered_map<int, int> countMap;
   for (int x : left) {
     countMap[x]++;
   }
@@ -19,5 +22,5 @@ std::string part2(const std::vector<std::string> &puzzleInput) {
     result += (long)item * countMap[item];
   }
 
-  return std::to_string(result);
+  return result;
 }

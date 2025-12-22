@@ -1,13 +1,12 @@
 package main
 
 import (
-	"strconv"
 	"strings"
 )
 
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	y := strings.Index(puzzleInput[0], "S")
-	return strconv.Itoa(split(puzzleInput, y))
+	return split(puzzleInput, y)
 }
 
 func split(diagram []string, y int) int {

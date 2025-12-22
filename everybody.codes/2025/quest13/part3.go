@@ -1,9 +1,5 @@
 package main
 
-import (
-	"strconv"
-)
-
 type segment struct {
 	left      int
 	right     int
@@ -14,7 +10,7 @@ func (s segment) length() int {
 	return s.right - s.left + 1
 }
 
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	turns := 202520252025
 	numbers, total := buildNumbers3(puzzleInput)
 	slot, curr := turns%total, 0
@@ -22,9 +18,9 @@ func part3(puzzleInput []string) string {
 		d := slot - curr
 		if d < seg.length() {
 			if seg.clockwise {
-				return strconv.Itoa(seg.left + d)
+				return seg.left + d
 			}
-			return strconv.Itoa(seg.right - d)
+			return seg.right - d
 		}
 		curr += seg.length()
 	}

@@ -1,14 +1,13 @@
 package main
 
 import (
-	"strconv"
 	"strings"
 )
 
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	y := strings.Index(puzzleInput[0], "S")
 	memo := make(map[[2]int]int)
-	return strconv.Itoa(down(puzzleInput, 1, y, memo))
+	return down(puzzleInput, 1, y, memo)
 }
 
 func down(diagram []string, x, y int, memo map[[2]int]int) int {

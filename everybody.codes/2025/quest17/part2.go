@@ -1,11 +1,7 @@
 package main
 
-import (
-	"strconv"
-)
-
 // dumb brute force solution
-func part2(puzzleInput []string) interface{} {
+func part2(puzzleInput []string) any {
 	n := len(puzzleInput)
 	xc, yc, rmx, tmx := n/2, n/2, 0, 0
 
@@ -27,5 +23,5 @@ func part2(puzzleInput []string) interface{} {
 		prevTot += tot
 	}
 
-	return strconv.Itoa(tmx * rmx)
+	return tmx * rmx
 }

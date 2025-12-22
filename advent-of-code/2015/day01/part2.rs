@@ -1,5 +1,7 @@
-pub fn part2(puzzle_input: &[String]) -> String {
-    let mut floor = 0;
+use crate::{Answer, answer};
+
+pub fn part2(puzzle_input: &[String]) -> Answer {
+    let mut floor = 1;
 
     for (i, c) in puzzle_input[0].chars().enumerate() {
         match c {
@@ -9,9 +11,9 @@ pub fn part2(puzzle_input: &[String]) -> String {
         }
 
         if floor == -1 {
-            return (i + 1).to_string();
+            return answer(i);
         }
     }
 
-    "0".to_string()
+    answer(-1)
 }

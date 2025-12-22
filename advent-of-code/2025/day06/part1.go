@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	numbers, operations := parseInput(puzzleInput)
 	result := 0
 	for i, op := range operations {
@@ -19,7 +19,7 @@ func part1(puzzleInput []string) string {
 		}
 		result += column
 	}
-	return strconv.Itoa(result)
+	return result
 }
 
 func parseInput(puzzleInput []string) ([][]int, []string) {

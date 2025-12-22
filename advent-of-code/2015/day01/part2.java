@@ -3,7 +3,7 @@ import java.util.List;
 public class part2 {
   private static final char OPEN = '(';
 
-  public static String solve(final List<String> puzzleInput) {
+  public static Object solve(final List<String> puzzleInput) {
     int floor = 0;
     int i = 0;
 

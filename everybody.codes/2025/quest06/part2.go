@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	A, B, C := 0, 0, 0
 	result := 0
 	for _, c := range puzzleInput[0] {
@@ -23,5 +19,5 @@ func part2(puzzleInput []string) string {
 			result += C
 		}
 	}
-	return strconv.Itoa(result)
+	return result
 }

@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	a := newComplexNumber(puzzleInput[0])
 	oa := sum(a, newComplexNumber("[1000,1000]"))
 
@@ -18,5 +14,5 @@ func part3(puzzleInput []string) string {
 		}
 	}
 
-	return strconv.Itoa(result)
+	return result
 }

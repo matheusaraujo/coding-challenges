@@ -2,7 +2,6 @@ package main
 
 import (
 	"math"
-	"strconv"
 )
 
 type Point struct {
@@ -28,7 +27,7 @@ func (q *Queue) IsEmpty() bool {
 	return len(*q) == 0
 }
 
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	t := puzzleInput
 	is, js := find(t, 'S')
 	ie, je := find(t, 'E')
@@ -56,7 +55,7 @@ func part2(puzzleInput []string) string {
 		cDist := dist[current.i*width+current.j]
 
 		if current == end {
-			return strconv.Itoa(cDist)
+			return cDist
 		}
 
 		moves := []Point{
@@ -91,7 +90,7 @@ func part2(puzzleInput []string) string {
 		}
 	}
 
-	return "-1"
+	return -1
 }
 
 func find(t []string, g byte) (int, int) {

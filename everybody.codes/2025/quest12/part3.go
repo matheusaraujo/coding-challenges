@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	barrels := parseInput(puzzleInput)
 	result := 0
 	for k := 0; k < 3; k++ {
@@ -12,7 +8,7 @@ func part3(puzzleInput []string) string {
 		destroy(barrels, i, j)
 		result += d
 	}
-	return strconv.Itoa(result)
+	return result
 }
 
 func best(barrels [][]int) (int, int, int) {

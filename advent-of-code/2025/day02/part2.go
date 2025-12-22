@@ -1,12 +1,11 @@
 package main
 
 import (
-	"strconv"
 	"strings"
 )
 
-func part2(puzzleInput []string) string {
-	return strconv.Itoa(solve(puzzleInput, invalid2))
+func part2(puzzleInput []string) any {
+	return solve(puzzleInput, invalid2)
 }
 
 func invalid2(num string) bool {

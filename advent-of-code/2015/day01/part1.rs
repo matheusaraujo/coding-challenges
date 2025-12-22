@@ -1,9 +1,15 @@
-pub fn part1(puzzle_input: &[String]) -> String {
-    let line = &puzzle_input[0];
+use crate::{Answer, answer};
 
-    let open_parentheses = line.matches('(').count();
-    let close_parentheses = line.matches(')').count();
+pub fn part1(puzzle_input: &[String]) -> Answer {
+    let line = puzzle_input.first().map(|s| s.as_str()).unwrap_or("");
 
-    let result = open_parentheses as i32 - close_parentheses as i32;
-    result.to_string()
+    let result = line.chars().fold(0i32, |acc, c| {
+        match c {
+            '(' => acc + 1,
+            ')' => acc - 1,
+            _ => acc,
+        }
+    });
+
+    answer(result)
 }

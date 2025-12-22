@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	names := strings.Split(puzzleInput[0], ",")
 	instructions := strings.Split(puzzleInput[2], ",")
 	position := 0

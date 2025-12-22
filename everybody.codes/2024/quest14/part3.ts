@@ -1,6 +1,6 @@
 import { directions, Position, trees } from "./helpers";
 
-export function part3(puzzleInput: string[]): string {
+export function part3(puzzleInput: string[]): any {
   const { positions, leaves, height } = trees(
     puzzleInput.map((line) => line.split(",")),
   );
@@ -15,7 +15,7 @@ export function part3(puzzleInput: string[]): string {
     }
   }
 
-  return minMurk.toString();
+  return minMurk;
 }
 
 type QueueItem = {

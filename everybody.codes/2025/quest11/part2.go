@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	columns, _ := parseInput(puzzleInput)
 
 	phase, t := 1, 0
@@ -26,12 +22,12 @@ func part2(puzzleInput []string) string {
 			}
 		}
 		if balanced == 1 {
-			return strconv.Itoa(t - 1)
+			return t - 1
 		}
 		if moved == 0 {
 			phase = 2
 		}
 		t++
 	}
-	return "0"
+	return 0
 }

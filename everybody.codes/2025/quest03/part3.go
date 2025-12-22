@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	sizes := parseInput(puzzleInput[0])
 
 	curr, countCurr, maxCountCurr := sizes[0], 1, 1
@@ -19,5 +15,5 @@ func part3(puzzleInput []string) string {
 		maxCountCurr = max(maxCountCurr, countCurr)
 	}
 
-	return strconv.Itoa(maxCountCurr)
+	return maxCountCurr
 }

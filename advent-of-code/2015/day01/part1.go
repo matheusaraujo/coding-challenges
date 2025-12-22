@@ -1,13 +1,12 @@
 package main
 
 import (
-	"strconv"
 	"strings"
 )
 
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	openParentheses := strings.Count(puzzleInput[0], "(")
 	closeParentheses := strings.Count(puzzleInput[0], ")")
 
-	return strconv.Itoa(openParentheses - closeParentheses)
+	return openParentheses - closeParentheses
 }

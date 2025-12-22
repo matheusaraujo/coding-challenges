@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	sword := buildSword(puzzleInput[0])
-	return strconv.Itoa(sword.quality)
+	return sword.quality
 }

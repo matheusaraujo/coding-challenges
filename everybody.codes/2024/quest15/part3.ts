@@ -6,7 +6,7 @@ import { solvePart2 } from "./part2";
 // the middle section only connects to left/right at the bottom, and herbs are close by.
 // We slightly tweak the input (rename one herb: K → L) to force both herbs to be visited.
 // A proper generic solution would need BFS over a growing state graph — which is overkill here.
-export function part3(puzzleInput: string[]): string {
+export function part3(puzzleInput: string[]): any {
   const map: Grid = puzzleInput.map((line: string) => line.split(""));
   const h = map.length;
   const w = 85;
@@ -28,5 +28,5 @@ export function part3(puzzleInput: string[]): string {
     2 * midRow.indexOf("L") +
     2 * (w - 1 - midRow.indexOf("K"));
 
-  return (map0Dist + map2Dist + dist).toString();
+  return map0Dist + map2Dist + dist;
 }

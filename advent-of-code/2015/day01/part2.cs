@@ -2,7 +2,7 @@ namespace PuzzleBox;
 
 public static class Part2
 {
-    public static string Solve(List<string> puzzleInput)
+    public static Object Solve(List<string> puzzleInput)
     {
         int floor = 0;
 

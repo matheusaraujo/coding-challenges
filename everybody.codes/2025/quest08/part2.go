@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	lines := parseInput(puzzleInput)
 	intersections := 0
 
@@ -16,5 +12,5 @@ func part2(puzzleInput []string) string {
 		}
 	}
 
-	return strconv.Itoa(intersections)
+	return intersections
 }

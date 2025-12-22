@@ -1,6 +1,6 @@
 import { CHANGES } from "./helpers";
 
-export function part3(puzzleInput: string[]): string {
+export function part3(puzzleInput: string[]): any {
   const grid = puzzleInput.map((line) => line.split(""));
   const width = grid[0].length,
     height = grid.length;
@@ -30,5 +30,5 @@ export function part3(puzzleInput: string[]): string {
     altitude += CHANGES[grid[starting.y][starting.x]];
   }
 
-  return distance.toString();
+  return distance;
 }

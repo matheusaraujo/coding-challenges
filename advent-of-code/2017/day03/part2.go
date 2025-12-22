@@ -8,9 +8,9 @@ type point struct {
 	x, y int
 }
 
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	input, _ := strconv.Atoi(puzzleInput[0])
-	return strconv.Itoa(spiral(input))
+	return spiral(input)
 }
 
 func spiral(n int) int {

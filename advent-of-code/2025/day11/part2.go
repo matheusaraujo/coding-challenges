@@ -2,17 +2,16 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	graph := parseInput(puzzleInput)
 	required := map[string]bool{
 		"fft": false,
 		"dac": false,
 	}
 	memo := make(map[string]map[string]int)
-	return strconv.Itoa(dfsMemo("svr", "out", graph, required, memo))
+	return dfsMemo("svr", "out", graph, required, memo)
 }
 
 func dfsMemo(node, target string, graph map[string][]string, required map[string]bool, memo map[string]map[string]int) int {

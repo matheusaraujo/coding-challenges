@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	operations := make([]rune, 0)
 	idx := make([]int, 0)
 	n := len(puzzleInput) - 1
@@ -48,5 +44,5 @@ func part2(puzzleInput []string) string {
 		result += column
 	}
 
-	return strconv.Itoa(result)
+	return result
 }

@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	plants, id, cases, positives, negatives := parseInput(puzzleInput)
 
 	mxc := maxCase(positives, negatives, len(cases[0]))
@@ -22,7 +18,7 @@ func part3(puzzleInput []string) string {
 			result += mx - e
 		}
 	}
-	return strconv.Itoa(result)
+	return result
 }
 
 // on the final input, each "root" plant contributes only positively or negatively to the next one

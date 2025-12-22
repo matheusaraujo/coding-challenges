@@ -1,22 +1,18 @@
 use super::helpers::parse_input;
+use crate::{Answer, answer};
 use std::collections::HashMap;
 
-pub fn part2(puzzle_input: &[String]) -> String {
+pub fn part2(puzzle_input: &[String]) -> Answer {
     let (left, right) = parse_input(puzzle_input);
 
-    let mut count: HashMap<i32, i32> = HashMap::new();
-
-    for x in left {
-        *count.entry(x).or_insert(0) += 1;
+    let mut counts = HashMap::new();
+    for &num in &right {
+        *counts.entry(num).or_insert(0) += 1;
     }
 
-    let mut result: i32 = 0;
+    let result: i32 = left.iter()
+        .map(|&l| l * counts.get(&l).unwrap_or(&0))
+        .sum();
 
-    for item in right {
-        if let Some(count_value) = count.get(&item) {
-            result += item * count_value;
-        }
-    }
-
-    result.to_string()
+    answer(result)
 }

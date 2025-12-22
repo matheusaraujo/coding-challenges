@@ -1,14 +1,10 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	output, columns := 0, 90
 	blocks := parseInput(puzzleInput)
 	for _, b := range blocks {
 		output += columns / b
 	}
-	return strconv.Itoa(output)
+	return output
 }

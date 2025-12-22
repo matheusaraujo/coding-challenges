@@ -1,16 +1,12 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	result := 0
 	for _, bank := range puzzleInput {
 		m := joltage2(bank)
 		result += m
 	}
-	return strconv.Itoa(result)
+	return result
 }
 
 func joltage2(bank string) int {

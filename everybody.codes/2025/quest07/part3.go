@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	prefixes, m := parseInput(puzzleInput)
 	seen := make(map[string]struct{})
 
@@ -13,7 +9,7 @@ func part3(puzzleInput []string) string {
 			next([]rune(pref), m, seen)
 		}
 	}
-	return strconv.Itoa(len(seen))
+	return len(seen)
 }
 
 func next(p []rune, m map[rune][]rune, seen map[string]struct{}) {

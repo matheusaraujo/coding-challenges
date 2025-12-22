@@ -1,6 +1,6 @@
 import { bfs, parseInput } from "./helpers";
 
-export function part3(puzzleInput: string[]): string {
+export function part3(puzzleInput: string[]): any {
   const { palms, grid, wells } = parseInput(puzzleInput);
   let minTotalTime = Infinity;
 
@@ -8,5 +8,5 @@ export function part3(puzzleInput: string[]): string {
     minTotalTime = Math.min(minTotalTime, bfs([well], palms, grid).totalTime);
   }
 
-  return minTotalTime.toString();
+  return minTotalTime;
 }

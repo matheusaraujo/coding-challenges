@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	plants, id, _, _, _ := parseInput(puzzleInput)
-	return strconv.Itoa(plants[id].Energy(id, plants))
+	return plants[id].Energy(id, plants)
 }

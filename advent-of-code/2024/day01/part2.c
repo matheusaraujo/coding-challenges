@@ -3,7 +3,7 @@ enum { MAX_SIZE = 100000 };
 #include "helpers.h"
 #include "pb_helpers.h"
 
-char *part2(char **puzzle_input, int size) {
+void *part2(char **puzzle_input, int size) {
   int result = 0;
   int left[size], right[size];
   int count[MAX_SIZE];
@@ -20,5 +20,5 @@ char *part2(char **puzzle_input, int size) {
     result += left[i] * count[left[i]];
   }
 
-  return pb_int_to_str(result);
+  return answer(result);
 }

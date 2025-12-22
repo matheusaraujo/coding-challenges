@@ -1,14 +1,10 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
-	return strconv.Itoa(solve(puzzleInput, func(n int) int {
+func part2(puzzleInput []string) any {
+	return solve(puzzleInput, func(n int) int {
 		if n >= 3 {
 			return n - 1
 		}
 		return n + 1
-	}))
+	})
 }

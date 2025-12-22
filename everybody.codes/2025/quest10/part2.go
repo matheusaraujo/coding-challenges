@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	turns := 20
 
 	d := dragonPositions(turns, len(puzzleInput), len(puzzleInput[0]))
@@ -25,7 +21,7 @@ func part2(puzzleInput []string) string {
 		}
 	}
 
-	return strconv.Itoa(len(eaten))
+	return len(eaten)
 }
 
 func dragonPositions(turns, m, n int) []map[position]bool {

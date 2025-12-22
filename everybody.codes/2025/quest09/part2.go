@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	s := 0
 	for c := 0; c < len(puzzleInput); c++ {
 		for p1 := 0; p1 < len(puzzleInput); p1++ {
@@ -15,5 +11,5 @@ func part2(puzzleInput []string) string {
 			}
 		}
 	}
-	return strconv.Itoa(s)
+	return s
 }

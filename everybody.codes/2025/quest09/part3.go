@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	f := make(map[int][]int)
 
 	for c := 0; c < len(puzzleInput); c++ {
@@ -27,7 +23,7 @@ func part3(puzzleInput []string) string {
 			}
 		}
 	}
-	return strconv.Itoa(biggestFamily(f))
+	return biggestFamily(f)
 }
 
 func biggestFamily(f map[int][]int) int {

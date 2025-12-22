@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	sizes := parseInput(puzzleInput[0])
 
 	sum := 0
@@ -18,5 +14,5 @@ func part1(puzzleInput []string) string {
 		}
 	}
 
-	return strconv.Itoa(sum)
+	return sum
 }

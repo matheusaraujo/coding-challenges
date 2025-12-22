@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	teeth := parseInput(puzzleInput)
 	var ratio float64 = 2025
 
@@ -12,5 +8,5 @@ func part1(puzzleInput []string) string {
 		ratio *= float64(teeth[i]) / float64(teeth[i-1])
 	}
 
-	return strconv.Itoa(int(ratio))
+	return int(ratio)
 }

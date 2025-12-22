@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	pattern := parseInput(puzzleInput)
 	floor := initial(34)
 
@@ -18,7 +14,7 @@ func part3(puzzleInput []string) string {
 
 		// cycle detection
 		if prev, ok := seen[h]; ok {
-			return strconv.Itoa(calc(prev, i, limit, contrib))
+			return calc(prev, i, limit, contrib)
 		}
 
 		seen[h] = i
@@ -34,7 +30,7 @@ func part3(puzzleInput []string) string {
 	for _, v := range contrib {
 		total += v
 	}
-	return strconv.Itoa(total)
+	return total
 }
 
 func initial(n int) [][]rune {

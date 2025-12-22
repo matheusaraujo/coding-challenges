@@ -1,3 +1,4 @@
+
 (defun part2 (puzzle-input)
   "Finds the 1-based index of the character that first reaches floor -1. Returns the integer result."
   (let* ((input-string (car puzzle-input)) (floor 0))

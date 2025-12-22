@@ -1,6 +1,6 @@
 import { CHANGES, processStep } from "./helpers";
 
-export function part1(puzzleInput: string[]): string {
+export function part1(puzzleInput: string[]): any {
   const grid = puzzleInput.map((line) => line.split(""));
   const width = grid[0].length,
     height = grid.length;
@@ -32,5 +32,5 @@ export function part1(puzzleInput: string[]): string {
     );
   }
 
-  return Math.max(...Object.values(states)).toString();
+  return Math.max(...Object.values(states));
 }

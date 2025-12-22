@@ -1,9 +1,5 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
-	return strconv.Itoa(solve(parseInput(puzzleInput)))
+func part3(puzzleInput []string) any {
+	return solve(parseInput(puzzleInput))
 }

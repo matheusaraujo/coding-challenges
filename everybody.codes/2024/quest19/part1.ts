@@ -1,6 +1,6 @@
 import { offsets, parseInput } from "./helpers";
 
-export function part1(puzzleInput: string[]): string {
+export function part1(puzzleInput: string[]): any {
   const { sequence, grid } = parseInput(puzzleInput);
   const height = grid.length;
   const width = grid[0].length;

@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class part1 {
-  public static String solve(final List<String> puzzleInput) {
+  public static Object solve(final List<String> puzzleInput) {
     final List<List<Integer>> parsedInput = helpers.parseInput(puzzleInput);
     final List<Integer> left = parsedInput.get(0);
     final List<Integer> right = parsedInput.get(1);

@@ -4,25 +4,27 @@
 #include <string>
 #include <vector>
 
-int stringToInt(const std::string &str) {
+using namespace std;
+
+int stringToInt(const string &str) {
   try {
-    return std::stoi(str);
+    return stoi(str);
   } catch (...) {
-    throw std::runtime_error("Could not convert to number: " + str);
+    throw runtime_error("Could not convert to number: " + str);
   }
 }
 
-void parseInput(const std::vector<std::string> &puzzleInput,
-                std::vector<int> &left, std::vector<int> &right) {
-  for (const std::string &line : puzzleInput) {
-    std::stringstream ss(line);
-    std::string p1, p2;
+void parseInput(const vector<string> &puzzleInput, vector<int> &left,
+                vector<int> &right) {
+  for (const string &line : puzzleInput) {
+    stringstream ss(line);
+    string p1, p2;
     if (ss >> p1 >> p2) {
       left.push_back(stringToInt(p1));
       right.push_back(stringToInt(p2));
     }
   }
 
-  std::sort(left.begin(), left.end());
-  std::sort(right.begin(), right.end());
+  sort(left.begin(), left.end());
+  sort(right.begin(), right.end());
 }

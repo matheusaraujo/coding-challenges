@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part1(puzzleInput []string) string {
+func part1(puzzleInput []string) any {
 	seen := make(map[position]bool)
 	result := 0
 	move(puzzleInput, position{i: len(puzzleInput) / 2, j: len(puzzleInput[0]) / 2}, seen, 0, 4)
@@ -16,7 +12,7 @@ func part1(puzzleInput []string) string {
 			}
 		}
 	}
-	return strconv.Itoa(result)
+	return result
 }
 
 func move(board []string, p position, seen map[position]bool, d int, md int) int {

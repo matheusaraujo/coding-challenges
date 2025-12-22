@@ -1,18 +1,21 @@
+#include <any>
 #include <cmath>
 #include <string>
 #include <vector>
 
-void parseInput(const std::vector<std::string> &puzzleInput,
-                std::vector<int> &left, std::vector<int> &right);
+using namespace std;
 
-std::string part1(const std::vector<std::string> &puzzleInput) {
-  std::vector<int> left, right;
+void parseInput(const vector<string> &puzzleInput, vector<int> &left,
+                vector<int> &right);
+
+any part1(const vector<string> &puzzleInput) {
+  vector<int> left, right;
   parseInput(puzzleInput, left, right);
 
   long sum = 0;
   for (size_t i = 0; i < left.size(); ++i) {
-    sum += std::abs(left[i] - right[i]);
+    sum += abs(left[i] - right[i]);
   }
 
-  return std::to_string(sum);
+  return to_string(sum);
 }

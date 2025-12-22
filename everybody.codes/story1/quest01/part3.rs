@@ -1,8 +1,9 @@
+use crate::{Answer, answer};
 use super::helpers::solve;
 use std::collections::HashMap;
 
-pub fn part3(puzzle_input: &[String]) -> String {
-    solve(puzzle_input, find_cycle).to_string()
+pub fn part3(puzzle_input: &[String]) -> Answer {
+    answer(solve(puzzle_input, find_cycle))
 }
 
 fn find_cycle(n: usize, e: usize, m: usize) -> usize {

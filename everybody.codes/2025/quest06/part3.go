@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part3(puzzleInput []string) string {
+func part3(puzzleInput []string) any {
 	line := puzzleInput[0]
 	distance := 1000
 	repeat := 1000
@@ -18,7 +14,7 @@ func part3(puzzleInput []string) string {
 		}
 	}
 
-	return strconv.Itoa(result)
+	return result
 }
 
 func buildMap(line string, distance int, repeat int) [][]int {

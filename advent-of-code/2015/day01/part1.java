@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class part1 {
-  public static String solve(final List<String> puzzleInput) {
+  public static Object solve(final List<String> puzzleInput) {
     return Integer.toString(count(puzzleInput.get(0), '(') - count(puzzleInput.get(0), ')'));
   }
 

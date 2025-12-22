@@ -2,11 +2,10 @@ package main
 
 import (
 	"slices"
-	"strconv"
 )
 
-func part2(puzzleInput []string) string {
-	return strconv.Itoa(solve(puzzleInput, rearange))
+func part2(puzzleInput []string) any {
+	return solve(puzzleInput, rearange)
 }
 
 func rearange(s string) string {

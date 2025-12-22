@@ -1,10 +1,6 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	prev := -1
 	curr := 0
 
@@ -33,5 +29,5 @@ func part2(puzzleInput []string) string {
 		grid = next
 	}
 
-	return strconv.Itoa(curr)
+	return curr
 }

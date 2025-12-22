@@ -1,13 +1,13 @@
+use crate::{Answer, answer};
 use super::helpers::eni;
 use super::helpers::solve;
 
-pub fn part2(puzzle_input: &[String]) -> String {
-    solve(puzzle_input, |n, e, m| {
+pub fn part2(puzzle_input: &[String]) -> Answer {
+    answer(solve(puzzle_input, |n, e, m| {
         let exp = e.saturating_sub(5);
         let base_score = mod_pow(n, exp, m);
         eni(base_score, n, 5, m)
-    })
-    .to_string()
+    }))
 }
 
 fn mod_pow(mut base: usize, mut exp: usize, modulus: usize) -> usize {

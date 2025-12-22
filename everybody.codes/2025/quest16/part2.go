@@ -1,11 +1,7 @@
 package main
 
-import (
-	"strconv"
-)
-
-func part2(puzzleInput []string) string {
+func part2(puzzleInput []string) any {
 	blocks := parseInput(puzzleInput)
 	spell := findSpell(blocks)
-	return strconv.Itoa(prod(spell))
+	return prod(spell)
 }
