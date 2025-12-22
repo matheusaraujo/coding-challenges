@@ -18,7 +18,7 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-    name: run ${{ inputs.challenge }}-${{ inputs.event }}
+    name: ${{ inputs.challenge }}-${{ inputs.event }}
     steps:
       - uses: actions/checkout@v4
 
