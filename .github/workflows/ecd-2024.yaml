@@ -1,0 +1,18 @@
+name: Everybody Codes 2024
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'everybody.codes/2024/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  run:
+    uses: ./.github/workflows/_puzzle-box.yaml
+    with:
+      challenge: ecd
+      event: "2024"
+    secrets:
+      ECD_SESSION_COOKIE: ${{ secrets.ECD_SESSION_COOKIE }}

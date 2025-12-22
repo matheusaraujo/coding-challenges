@@ -1,0 +1,41 @@
+name: "puzzle-box-gha"
+
+on:
+  workflow_call:
+    inputs:
+      challenge:
+        required: true
+        type: string
+      event:
+        required: true
+        type: string
+    secrets:
+      AOC_SESSION_COOKIE:
+        required: false
+      ECD_SESSION_COOKIE:
+        required: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    name: run ${{ inputs.challenge }}-${{ inputs.event }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # TODO: move the adjusts below to docker image
+      - name: Run Puzzle Box in Dev Container
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: maraujo127/puzzle-box
+          cacheFrom: maraujo127/puzzle-box
+          push: never
+          runCmd: |
+            mkdir -p /home/vscode/tmp
+            export TMPDIR=/home/vscode/tmp
+            export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+            sudo chown -R vscode:vscode /usr/local/puzzle-box
+
+            echo "${{ secrets.AOC_SESSION_COOKIE }}" > .aoc.session.cookie
+            echo "${{ secrets.ECD_SESSION_COOKIE }}" > .ecd.session.cookie
+            /usr/local/puzzle-box/main.sh check ${{ inputs.challenge }} --event ${{ inputs.event }}
+            /usr/local/puzzle-box/main.sh run   ${{ inputs.challenge }} --event ${{ inputs.event }}
