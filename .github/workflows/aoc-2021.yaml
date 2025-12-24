@@ -1,0 +1,19 @@
+name: Advent of Code 2021
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'advent-of-code/2021/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  run:
+    uses: ./.github/workflows/_puzzle-box.yaml
+    with:
+      challenge: aoc
+      event: "2021"
+    secrets:
+      AOC_SESSION_COOKIE: ${{ secrets.AOC_SESSION_COOKIE }}
+      

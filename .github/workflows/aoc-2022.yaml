@@ -1,0 +1,19 @@
+name: Advent of Code 2022
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'advent-of-code/2022/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  run:
+    uses: ./.github/workflows/_puzzle-box.yaml
+    with:
+      challenge: aoc
+      event: "2022"
+    secrets:
+      AOC_SESSION_COOKIE: ${{ secrets.AOC_SESSION_COOKIE }}
+      
