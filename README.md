@@ -16,6 +16,7 @@
 [![Everybody Codes 2025](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-2025.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-2025.yaml)
 [![Everybody Codes story1](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story1.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story1.yaml)
 [![Everybody Codes story2](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story2.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story2.yaml)
+[![Everybody Codes story3](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story3.yaml/badge.svg)](https://github.com/matheusaraujo/coding-challenges/actions/workflows/ecd-story3.yaml)
 
 <!-- progress-begin -->
 
