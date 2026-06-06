@@ -27,7 +27,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: maraujo127/puzzle-box
-          imageTag: 0.0.30
+          imageTag: 0.0.31
           cacheFrom: maraujo127/puzzle-box
           push: never
           runCmd: |
